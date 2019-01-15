@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:background="#f9373740">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_photo_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/itemName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:gravity="bottom"
+        android:fontFamily="@font/eczar"
+        android:text="Pralka"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/shopName"
+        app:layout_constraintLeft_toRightOf="@+id/image"
+        app:layout_constraintRight_toLeftOf="@+id/typeColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/shopName"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/eczar"
+        android:text="Media Markt, Kraków "
+        android:textColor="#c1c1c1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/data"
+        app:layout_constraintLeft_toRightOf="@+id/image"
+        app:layout_constraintRight_toLeftOf="@+id/typeColor"
+        app:layout_constraintTop_toBottomOf="@id/itemName" />
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/eczar"
+        android:text="28 stycznia 2018"
+        android:textColor="#c1c1c1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/image"
+        app:layout_constraintRight_toLeftOf="@+id/typeColor"
+        app:layout_constraintTop_toBottomOf="@id/shopName" />
+
+    <ImageView
+        android:id="@+id/typeColor"
+        android:layout_width="10dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="#4b802e"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,8 @@
+url:http://djustice-android.tumblr.com
+name:Felipe
+email:hariutd@gmail.com
+gender:Unicorn
+botmaster:Hari Vignesh Jayapalan
+organization:Medkumo
+version:0.0.1
+
