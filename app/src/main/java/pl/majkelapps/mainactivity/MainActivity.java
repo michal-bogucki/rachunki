@@ -1,5 +1,8 @@
 package pl.majkelapps.mainactivity;
 
+import android.Manifest;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TextInputLayout;
@@ -7,6 +10,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
 
 import javax.inject.Inject;
 
@@ -57,8 +63,27 @@ public class MainActivity extends MvpActivity<MainActivityPresenter> {
         return R.layout.activity_main;
     }
 
+    @Override
+    protected void openCropper() {
+        CropImage.activity()
+                .setGuidelines(CropImageView.Guidelines.ON)
+                .start(this);
+    }
 
-    @OnClick({R.id.menu, R.id.sort, R.id.search})
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            if (resultCode == RESULT_OK) {
+                Uri resultUri = result.getUri();
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Exception error = result.getError();
+            }
+        }
+    }
+
+
+    @OnClick({R.id.menu, R.id.sort, R.id.search, R.id.fab})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.menu:
@@ -68,8 +93,14 @@ public class MainActivity extends MvpActivity<MainActivityPresenter> {
             case R.id.search:
                 showHideSearchEditText();
                 break;
+            case R.id.fab:
+                addNew(Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                break;
         }
     }
+
+
 
     private void showHideSearchEditText() {
         int visible = searchEditText.getVisibility();

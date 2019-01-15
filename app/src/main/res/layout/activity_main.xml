@@ -78,6 +78,8 @@
             android:background="#363640"
             android:fontFamily="@font/eczar"
             android:hint="Search"
+            android:lines="1"
+            android:maxLines="1"
             android:padding="12dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"

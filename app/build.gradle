@@ -77,7 +77,9 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
     implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
     ///cropper
-    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    api 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    //permission
+    implementation 'com.karumi:dexter:5.0.0'
 
 
 }
