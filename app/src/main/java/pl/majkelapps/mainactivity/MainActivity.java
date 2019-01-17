@@ -50,6 +50,7 @@ public class MainActivity extends MvpActivity<MainActivityPresenter> {
         super.onCreate(savedInstanceState);
         fragmentManager = getSupportFragmentManager();
         initAdapter();
+
     }
 
     private void initAdapter() {

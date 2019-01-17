@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363640"
+    tools:context="pl.majkelapps.mainactivity.MainActivity">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_add_circle_outline_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/productName"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#0AFFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:theme="@style/TextLabel"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/shopName"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:gravity="bottom"
+            android:inputType="text"
+            android:hint="Product name"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/shopName"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:background="#0AFFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:theme="@style/TextLabel"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/productName">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:gravity="bottom"
+            android:hint="Shop"
+            android:lines="1"
+            android:maxLines="1"
+            android:inputType="text"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/category"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:background="#0AFFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:theme="@style/TextLabel"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/shopName">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:gravity="bottom"
+            android:hint="Category"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/cost"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:background="#0AFFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:theme="@style/TextLabel"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/category">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:gravity="bottom"
+            android:inputType="text"
+            android:hint="Cost"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="10dp"
+        android:background="#0AFFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:theme="@style/TextLabel"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/cost">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:gravity="bottom"
+            android:hint="Description"
+            android:paddingTop="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:background="#0AFFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:theme="@style/TextLabel"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/description">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:gravity="bottom"
+            android:hint="Date"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/lengthGuarantee"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:background="#0AFFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:theme="@style/TextLabel"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/date">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:gravity="bottom"
+            android:hint="Length of the guarantee"
+            android:lines="1"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_margin="10dp"
+        android:background="#0AFFFFFF"
+        android:text="CANCEL"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:gravity="center"
+        android:textSize="26dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toLeftOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@id/lengthGuarantee" />
+
+    <TextView
+        android:id="@+id/add"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_margin="10dp"
+        android:text="SAVE"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:gravity="center"
+        android:textSize="26dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@+id/cancel"
+        app:layout_constraintRight_toRightOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/lengthGuarantee" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+</android.support.constraint.ConstraintLayout>
